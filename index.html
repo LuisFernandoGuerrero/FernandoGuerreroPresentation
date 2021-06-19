@@ -14,15 +14,19 @@
     <title>Fernando Guerrero</title>
 </head>
 <body">
-    <header class="header">
+    <header id="scrollHeader" class="header">
         <div class="contenedor contenedorHeader"> 
             <ul class="menu">
-                <li class="item"><a href="#">Home</a></li>
-                <li class="item"><a href="#">About</a></li>
-                <li class="item"><a href="#">Services</a></li>
-                <li class="item"><a href="#">Portfolio</a></li>
-                <li class="item"><a href="#">Contact</a></li>
+                <li class="item"><a href="#scrollHeader">Inicio</a></li>
+                <li class="item"><a href="#scrollAbout">sobre mi</a></li>
+                <li class="item"><a href="#scrollSkills">habilidades</a></li>
+                <li class="item"><a href="#scrollPortfolio">portafolio</a></li>
+                <li class="item"><a href="#scrollContacto">contacto</a></li>
             </ul>
+
+            <div class="mobile-menu">
+                <img src="/build/img/barras.svg" alt="icono menu responsive">
+            </div>
 
             <div class="testimonial">
                 <blockquote>
@@ -33,7 +37,7 @@
         </div>
     </header>
 
-    <section class="about">
+    <section id="scrollAbout" class="about">
         <div class="about-me">
             <h3>Luis Fernando Guerrero Cruz</h3>
             <p>Soy nacido en Bogotá, Colombia. Tengo 20 años. Soy un Estudiante Colombiano apasionado por el mundo del desarrollo WEB. Cada día me gusta aprender más sobre este gran mundo! Estudio desarrollo WEB hace 2 años, pero lo empece a estudiar con una gran constancia diaria desde hace 9 meses. Soy estudiante de la universidad ECCI, ubicada en la ciudad de Bogotá. Soy un desarrollador WEB, quien con el mayor de los gustos estará presente cuando necesites tu pagina WEB de tu empresa. Tengo habilidades en: HTML5, CSS3, JavaScript, PHP, MySQL. Dentro de JavaScript lo uso en su forma nativa por el momento, y estoy en aprendizaje de su framework como: Angular. Trabajo con uno de los preprocesadores de CSS3: SASS, también trabajo el framework mas conocido como lo es BootStrap4. Dentro de PHP estoy en aprendizaje de sus frameworks como: Symfony y Laravel. y también en WordPress.</p>
@@ -46,7 +50,7 @@
         </div>
     </section>
 
-    <section class="skills contenedorMayor">
+    <section id="scrollSkills" class="skills contenedorMayor">
         <h3>mis habilidades</h3>
         <div class="contenedor contenedorSkills">
     <div class="skill-me">
@@ -65,7 +69,7 @@
         </div>
     </section>
 
-    <section class="portfolio contenedorMayor">
+    <section id="scrollPortfolio" class="portfolio contenedorMayor">
         <h3>portafolio de trabajos</h3>
         <div class="contenedor contenedorPortfolio">
             
@@ -96,7 +100,7 @@
         </div>
     </section>
 
-    <section class="contacto contenedorMayor">
+    <section id="scrollContacto" class="contacto contenedorMayor">
         <h3 class="name-contact">contacto</h3>
         <div class="contenedor contenedorContacto">
             <div class="redes-me">
@@ -110,10 +114,16 @@
         </div>
     </section>
 
+    <div class="top-buttom-container">
+        <div class="top">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="contenedor contenedorFooter">
             <p class="copy">Todos los derechos reservados &copy;</p>
-            <a href="https://github.com/LuisFernandoGuerrero/FernandoGuerreroPresentation.git" class="botones-trabajo boton-footer"><i class="fab fa-github"></i> github code</a>
+            <a href="https://github.com/LuisFernandoGuerrero/FernandoGuerreroPresentation.git" target="_blank" class="botones-trabajo boton-footer"><i class="fab fa-github"></i> github code</a>
         </div>
     </footer>
     <script src="/build/js/bundle.min.js"></script>
