@@ -1,0 +1,54 @@
+.header {
+    background-image: url('/build/img/Imagen_codigo.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    background-attachment: fixed;
+}
+
+.contenedorHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    gap: 55rem;
+}
+
+.menu {
+    visibility: hidden;
+    @include tablet {
+        visibility: visible;
+        display: flex;
+        gap: 4rem;
+        max-height: 3rem;
+    }
+
+    a {
+        font-size: 2rem;
+        color: $blanco;
+        text-transform: uppercase;
+        &:hover {
+            color: $cian;
+            font-size: 2.5rem;
+            transition: .3s color linear;
+            transition: .5s font-size linear;
+        }
+    }
+}
+
+.testimonial {
+    text-align: left;
+    color: $blanco;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    @include tablet {
+        text-align: right;
+        font-size: 4.5rem;
+    }
+}
+blockquote {
+    margin: 0;
+}

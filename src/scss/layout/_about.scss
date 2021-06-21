@@ -1,0 +1,89 @@
+.about {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    @include desktop {
+        padding: 5rem;
+        display: grid;
+        grid-template-columns: 70% 30%;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.image {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 95%;
+        height: 95%;
+        @include tablet {
+            width: 85%;
+            height: 85%;
+        }
+        @include desktop {
+            width: 100%;
+            height: 95%;
+        }
+
+    }
+}
+
+.about-me{
+    text-align: justify;
+    overflow: hidden;
+    @include desktop {
+        padding: 0 5rem 0 1.5rem;
+    }
+    h3 {
+        color: $blanco;
+        text-transform: uppercase;
+        font-size: 2.8rem;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+        @include desktop {
+            font-size: 3rem;
+            padding-top: 2rem;
+            padding-bottom: 4rem;
+            text-align: right;
+        }
+    }
+    p {
+        margin: 0;
+        color: $blanco;
+    }
+    a {
+        background-color: $azulOscuro;
+        padding: 1.4rem 8rem;
+        color: $sombreado;
+        display: inline-block;
+        &:hover {
+            background-color: $blanco;
+            color: $cian;
+            transition: 1s background-color linear;
+        }
+    }
+}
+.boton {
+    margin: 3rem 0;
+    display: block;
+    @include tablet {    
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+    }
+    a {
+        width: 100%;
+        text-align: center;
+        @include tablet {
+            width: auto;
+        }
+    }
+    i {
+        font-size: 2.2rem;
+    }
+}

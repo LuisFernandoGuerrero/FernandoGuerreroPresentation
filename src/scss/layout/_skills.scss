@@ -1,0 +1,39 @@
+.contenedorSkills {
+    padding: 5rem 0;
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+
+        @include tablet {
+            @include grid(2, 10rem);
+        }
+        @include desktop {
+            @include grid(3, 10rem);
+        }
+    }
+}
+
+.skill {
+    color: $blanco;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    i {
+        font-size: 8rem;
+    }
+    span {
+        font-size: 3rem;
+        user-select: none;
+    }   
+}
+
+h3 {
+    color: $blanco;
+    text-transform: uppercase;
+    padding-top: 3rem;
+    padding-bottom: 8rem;
+    text-align: start;
+}
