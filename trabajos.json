@@ -3,8 +3,15 @@
     {
         "nombre": "Aventura",
         "img": "/build/img/aventuraimage.webp",
-        "devCon": "Realizado con: HTML, CSS, JS",
+        "devCon": "Realizado con: HTML, SASS, JS",
         "url": "https://adventurefdog.netlify.app",
-        "gitCode": "https://github.com/LuisFernandoGuerrero/Aventura.git"
+        "gitCode": "https://github.com/LuisFernandoGuerrero/FernandoGuerrero.git"
+    },
+    {
+        "nombre": "Automoviles",
+        "img": "/build/img/automoviles.webp",
+        "devCon": "Realizado con: HTML, SASS, JS (Prueba técnica)",
+        "url": "https://automovilesfdog.netlify.app/",
+        "gitCode": "https://github.com/LuisFernandoGuerrero/Automoviles.git"
     }
 ]}

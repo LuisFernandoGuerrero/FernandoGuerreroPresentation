@@ -1,0 +1,65 @@
+.top-buttom-container {
+    position: fixed;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: -1;
+    bottom: 8rem;
+    right: -0.5rem;
+    @include tablet {
+        bottom: 5rem;
+        right: 2rem;
+    }
+}
+
+.top {
+    width: 0;
+    height: 0;
+    background-color: $azulOscuro;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .6s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    i {
+        position: absolute;
+        font-size: 1.7rem;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        color: $blanco;
+        transition: .6s;
+    }
+}
+
+.show {
+    z-index: 10;
+    .top {
+        animation: popup .3s ease-in-out;
+        width: 6.6rem;
+        height: 6.6rem;
+        z-index: 11;
+    }
+}
+
+.show {
+    i {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes popup {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    50% {
+        width: 10rem;
+        height: 10rem;
+    }
+    100% {
+        width: 6.6rem;
+        height: 6.6rem;
+    }
+}

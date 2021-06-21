@@ -1,140 +1,40 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(EaselPlugin);
 
-// Hi About me
-var hiAboutMe = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.contenedor-header',
-        start: "0 top",
-        end: "26.5% 0",
-        scrub: 1,
-    }
-});
+// Welcome 
+gsap.timeline()
+    .from('.contenedorHeader', {duration: 1, opacity: 0})
+    .from('.testimonial', {opacity: 0, scale: 0, ease: "back", delay: 0.1});
 
-// information animation
-hiAboutMe.from('.about-me', {
-    xPercent: -150,
-    opacity: 0
-});
-hiAboutMe.to('.about-me', {
-    x: 0,
-    opacity: 1,
-    duration: 3
-});
+// About me
 
-// image animation
-hiAboutMe.from('.image', {
-    opacity: 0,
-    duration: 5
-}, '-=5');
-hiAboutMe.to('.image', {
-    opacity: 1,
-});
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Bye about me
-var byeAboutMe = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.about',
-        start: "100% top",
-        end: "+=100 0",
-        scrub: 1,
-    }
-});
+var hiAboutInf = gsap.timeline({scrollTrigger: {trigger: '.about-me', start: '-40% 50%', end: '40% 50%', scrub: 1}, duration: 1});
+hiAboutInf.from('.about-me', {x: -5000, xPercent: -1000, duration: 2});
+hiAboutInf.to('.about-me', {xPercent: 0});
+// var hiAboutImg = gsap.timeline({scrollTrigger: {trigger: '.image', start: '-40% 50%', end: '40% 50%', scrub: 1},duration: 1});
+// hiAboutImg.from('.image-me', {opacity: 0, duration: 2});
+// hiAboutImg.to('.image-me', {opacity: 1});
+// var byeAboutInf = gsap.timeline({scrollTrigger: {trigger: '.about-me', start: '120% 50%', end: '130% 50%', scrub: 1}});
+// byeAboutInf.from('.about-me', {xPercent: 0, opacity: 1, duration: 2});
+// byeAboutInf.to('.about-me', {xPercent: -150, opacity: 0})
+// var byeAboutImg = gsap.timeline({scrollTrigger: {trigger: '.image', start: '90% 50%', end: '130% 50%',  scrub: 1}});
+// byeAboutImg.from('.image-me', {opacity: 1, duration: 2});
+// byeAboutImg.to('.image-me', {opacity: 0});
 
-// information animation
-byeAboutMe.from('.about-me', {
-    x: 0,
-    opacity: 1
-});
-byeAboutMe.to('.about-me', {
-    xPercent: -150,
-    opacity: 0,
-    duration: 3
-});
+// Skills 
+var hiSkills = gsap.timeline({scrollTrigger: {trigger:'.contenedorSkills', start: '0% 50%', end: '100% 50%', scrub: 1}})
+    .from('.skill', {opacity: 0, y: 160, stagger: 0.3, duration: 2, ease: "elastic"});
+var byeSkills = gsap.timeline({scrollTrigger: {trigger:'.contenedorSkills', start: '140% 50%', end: '150% 50%', scrub: 1}});
+byeSkills.from('.contenedorSkills', {opacity: 1});
+byeSkills.to('.contenedorSkills', {opacity: 0});
 
-// image animation
-byeAboutMe.from('.image', {
-    opacity: 1,
-    duration: 5
-});
-byeAboutMe.to('.image', {
-    opacity: 0
-});
+// Projects 
+// var hiProjects = gsap.timeline({scrollTrigger: {trigger: '.contenedorPortfolio', start: '40% 70%', end: '100% 70%', scrub: 1}})
+//     .from('.trabajo', {opacity: 0, y: 160, stagger: 0.3, duration: 2, ease: 'elastic'});
+// var byeProjects = gsap.timeline({scrollTrigger: {trigger: '.contenedorPortfolio', start: '120% 70%', end: '180%, 70%', scrub: 1}});
+// byeProjects.from('.contenedorPortfolio', {opacity: 1});
+// byeProjects.to('.contenedorPortfolio', {opacity: 0});
 
-// Hello Skills 
-var hiSkills = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.about-me',
-        start: "0 top",
-        end: "100% 0",
-        scrub: 1,
-    }
-});
-
-hiSkills.from('.skill', {
-    x: -1000,
-    opacity: 0
-});
-hiSkills.to('.skill', {
-    x: 0,
-    opacity: 1
-});
-
-// Bye Skills 
-var byeSkills = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.skills',
-        start: "100% top",
-        end: "+=100 0",
-        scrub: 1,
-    }
-});
-
-byeSkills.from('.skill', {
-    x: 0,
-    opacity: 1,
-    duration: 5
-});
-byeSkills.to('.skill', {
-    x: -1000,
-    opacity: 0,
-    duration: 5
-});
-
-// Hi Projects 
-
-var hiPortfolio = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.contenedorPortpolio',
-        start: '-200 top',
-        end: '0 0',
-        scrub: 1
-    }
-});
-
-hiPortfolio.from('.contenedorPortpolio', {duration: 0.4, opacity: 0})
-hiPortfolio.from(".trabajo", {opacity: 0, y:160, stagger:.3, duration: 2, ease:"elastic"})
-
-var hiContact = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.contenedorPortpolio',
-        start: '100% 50%',
-        end: '150% 50%',
-        scrub: 1
-    }
-})
-hiContact.from('.contenedorContacto', {duration: 0.4, opacity: 0})
-hiContact.from(".red", {opacity: 0, y:160, stagger:1, duration:25, ease:"elastic"})
-
-
-
-var hiFooter = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.contenedorFooter',
-        start: '0 100%',
-        end: '100% 100%',
-        scrub: 1
-    }
-})
-hiFooter.from('.contenedorFooter', {duration: 3, opacity: 0})
-hiFooter.from(".boton-footer", {opacity: 0, stagger:1, duration: 5, ease:"back"})
+// Contact 
+// var hiContact = gsap.timeline({scrollTrigger: {trigger:'.redes', start: '20% 50%', end:'+=10 50%', scrub: 1}})
+//     .from('.red', {opacity: 0, y: 160, stagger: 1, duration: 2, ease: 'elastic'});

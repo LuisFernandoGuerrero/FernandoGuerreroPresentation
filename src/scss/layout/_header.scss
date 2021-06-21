@@ -12,18 +12,24 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    gap: 55rem;
+    gap: 40rem;
+    position: relative;
+    padding-top: 2rem;
+    @include desktop {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
 }
 
 .menu {
     visibility: hidden;
-    @include tablet {
+    opacity: 0; 
+    @include desktop {
         visibility: visible;
         display: flex;
         gap: 4rem;
         max-height: 3rem;
+        opacity: 1;
     }
 
     a {
@@ -35,6 +41,19 @@
             font-size: 2.5rem;
             transition: .3s color linear;
             transition: .5s font-size linear;
+        }
+    }
+
+    li {
+        margin-top: 2rem;
+        padding-left: 2rem;
+
+        &:last-of-type {
+            margin-bottom: 2rem;
+        }
+        @include desktop {
+            margin: 0;
+            padding-left: 2rem;
         }
     }
 }
@@ -51,4 +70,28 @@
 }
 blockquote {
     margin: 0;
+}
+
+/*Menú hambuergues*/
+
+.mobile-menu {
+    position: absolute;
+    right: 2.5rem;
+    top: 2.5rem;
+    @include desktop {
+        display: none;
+    }
+
+    img {
+        width: 5rem;
+    }
+}
+
+.mostrar {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    width: 100%;
+    background-color: $sombreado;
+    transition: opacity 1.3s linear, visibility .5s linear;
 }
